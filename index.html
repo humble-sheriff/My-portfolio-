@@ -5,55 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f0f4c3, #c5e1a5);
+            color: #333;
+        }
+        header {
+            background: #4caf50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            margin: 1em 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .hero {
+            height: 300px;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .project {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        .skills, .contact {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #4caf50;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <h1>My Portfolio</h1>
         <nav>
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Explore my work and skills.</p>
+    <div class="hero">
+        <h2>Welcome to My Portfolio</h2>
+    </div>
+    <section id="projects" class="projects">
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of project 1.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3</h3>
+            <p>Description of project 3.</p>
         </div>
     </section>
-
-    <section id="projects">
-        <h2>Projects Showcase</h2>
-        <div class="projects-grid">
-            <!-- Project items will go here -->
-        </div>
-    </section>
-
-    <section id="skills">
+    <section id="skills" class="skills">
         <h2>Skills</h2>
-        <div class="skills-grid">
-            <!-- Skills items will go here -->
-        </div>
+        <p>List of skills...</p>
     </section>
-
-    <section id="contact">
+    <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
-
     <footer>
-        <div class="social-links">
-            <!-- Social links will go here -->
-        </div>
+        <p>&copy; 2026 My Portfolio</p>
     </footer>
 </body>
 </html>
